@@ -1,0 +1,296 @@
+/* This is for Development Purpose */
+
+
+/* Reference Borders */
+
+
+/* article {
+    border : 2px solid orange;
+}
+
+.container {
+    border : 2px solid magenta;
+} */
+
+
+/* --------------------------------------------------- */
+
+
+/* CSS STYLING STARTS HERE */
+
+
+/* --------------------------------------------------- */
+
+
+/* -------------------------
+        COMMON STUFF
+------------------------- */
+
+:root {
+    --color1: #FEE715FF;
+    --color2: #101820FF;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color2);
+    color: white;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 130%;
+}
+
+article,
+footer,
+header {
+    width: 100%;
+    min-width: 320px;
+    padding: 1.5em 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 3em;
+}
+
+.flex-reverse {
+    border-radius: 5px;
+}
+
+.colorful {
+    /* background-color: var(--color1); */
+    /* background: #9796f0; */
+    background: #16A085;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F4D03F, #16A085);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F4D03F, #16A085);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+}
+
+
+/* -------------------------
+        Header Layout
+------------------------- */
+
+.site-header {
+    text-align: center;
+}
+
+.site-title {
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 0.15rem;
+    background: #FEAC5E;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.site-navigation ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.site-navigation a {    
+    text-decoration: none;
+}
+
+.site-navigation li {
+    transition: 0.2s ease-in-out;
+}
+
+.site-navigation li:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+
+/* -------------------------
+        Main Section
+------------------------- */
+
+/* All Spans */
+
+span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 1.15rem;
+}
+
+
+/* Images on Website */
+
+img {
+    display: block;
+    width: 60%;
+    margin: 2em auto;
+    max-width: 15em;
+}
+
+.article-dp {
+    max-width: 15em;
+    border-radius: 20%;
+}
+
+/* Article Related */
+
+h2 {
+    font-family: 'Train One', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'Train One', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.article-content ul {
+    padding-left: 1.8em;
+}
+
+
+/* -------------------------
+          Footer
+------------------------- */
+
+footer p {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.contact-info img{
+    width: 2rem;
+    margin: 0;
+}
+
+.contact-info ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info li{
+    padding: 3.5% 3.5%;
+    border-radius: 50%;
+}
+
+.contact-info li{
+    transition: 0.2s ease-in-out;
+}
+
+.contact-info li:hover{
+    transform: scale(1.2);
+}
+
+/* -------------------------
+        Animations
+------------------------- */
+
+.animate-rtl {
+    position: relative;
+    animation-name: animate-rtl;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+@keyframes animate-rtl {
+    0% {
+        left: 100%
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.animate-ltr{
+    position: relative;
+    animation-name: animate-ltr;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+@keyframes animate-ltr{
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: 0%
+    }
+}
+
+/* -------------------------
+        Common Stuff
+------------------------- */
+
+.clip-text-background {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------
+        For Desktop
+------------------------- */
+
+@media(min-width: 650px) {
+    /* Navigation Related Modifications */
+    body {
+        font-size: 120%;
+    }
+    .site-navigation ul {
+        display: flex;
+    }
+    .site-navigation ul li {
+        margin-left: 2em;
+    }
+    /* Content Related modifications */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+    }
+    .flex-reverse {
+        flex-direction: row-reverse;
+    }
+    .article-dp:hover {
+        transform: scale(1.2);
+    }
+    .article-image {
+        width: 50%;
+        transition: 0.2s ease-in-out;
+    }
+
+    .article-dp {
+        border-radius: 20%;
+        transition: 0.2s ease-in-out;
+    }
+    .article-image:hover {
+        transform: scale(1.1);
+    }
+    .article-content {
+        width: 70%;
+    }
+
+    /* Footer Modifications */
+    .contact-info {
+        display: block;
+    }
+    .contact-info ul{
+        justify-content: space-evenly;
+    }
+    .contact-info li{
+        padding: 2%;
+    }
+}
