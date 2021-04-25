@@ -180,6 +180,10 @@ h3 {
     outline: none;
 }
 
+#skills-link a{
+    text-decoration: none;
+    color: white;
+}
 
 /* -------------------------
           Footer
