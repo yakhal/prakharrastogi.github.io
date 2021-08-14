@@ -185,6 +185,16 @@ h3 {
     color: white;
 }
 
+.certificate-link {
+    color:white;
+    text-decoration: none;
+}
+
+.certificate-link:hover {
+    color:white;
+    text-decoration: underline;
+}
+
 /* -------------------------
           Footer
 ------------------------- */
