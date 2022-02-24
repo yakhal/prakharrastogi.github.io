@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container logo">
+        <img src="images/logo.svg" alt="logo with text SPLITTER" />
+      </div>
+    </header>
+
+    <main>
+      <form action="">
+        <div class="container calculator">
+          <div>
+            <!-- Part 1 -->
+            <div class="billdetails">
+              <div class="fieldtext">
+                <p class="field-name">Bill</p>
+                <p class="error" id="error1">Can't be zero</p>
+              </div>
+              <div>
+                <input
+                  class="input"
+                  type="text"
+                  onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
+                  id="amount"
+                  placeholder="0"
+                  min="0"
+                />
+              </div>
+            </div>
+
+            <!-- Part 2 -->
+            <div class="tip-selector">
+              <div>
+                <p class="field-name">Select Tip %</p>
+              </div>
+              <div class="percentages">
+                <input type="button" value="5%" /><input
+                  type="button"
+                  value="10%"
+                /><input type="button" value="15%" /><input
+                  type="button"
+                  value="25%"
+                /><input type="button" value="50%" /><input
+                  class="input"
+                  type="number"
+                  name=""
+                  id="tip"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+
+            <!-- Part3 -->
+            <div class="billdetails">
+              <div class="fieldtext">
+                <p class="field-name">Number of People</p>
+                <p class="error" id="error2">Can't be zero</p>
+              </div>
+              <div>
+                <input
+                  class="input"
+                  type="text"
+                  onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
+                  id="people"
+                  placeholder="0"
+                  min="0"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Part 4 -->
+          <div class="result">
+            <div>
+              <!-- 4.1 -->
+              <div class="result-section">
+                <div>
+                  <p class="title">Tip Amount</p>
+                  <p class="subtitle">/ person</p>
+                </div>
+                <div>
+                  <p class="amount" id="tip-amount-display">$0.00</p>
+                </div>
+              </div>
+              <!-- 4.2 -->
+              <div class="result-section">
+                <div>
+                  <p class="title">Total</p>
+                  <p class="subtitle">/ person</p>
+                </div>
+                <div>
+                  <p class="amount" id="amount-display">$0.00</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button type="reset" class="">Reset</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Prakhar Rastogi</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

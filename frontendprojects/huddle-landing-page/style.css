@@ -1,0 +1,131 @@
+/* Common Styles */
+
+* {
+    box-sizing: border-box;
+    --color1: #4f0379;
+    --color2: white;
+    --color3: #9568af;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--color1);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--color2);
+}
+
+.container {
+    /* border: 2px solid white; */
+    max-width: 1775px;
+    margin: 0 auto;
+    padding: 2.2em;
+}
+
+/* Site Header Styles  */
+
+.site-title {
+    margin: 0;
+    /* margin-bottom: 1em; */
+}
+
+.site-title img {
+    max-width: 20em;
+    width: 45vw;
+}
+
+/* Content Styles */
+
+.site-image, .site-image img {
+    /* border: 2px solid orange; */
+    width: 100%;
+}
+
+.site-image img {
+    max-width: 600px;
+}
+
+.content {
+    text-align: center;
+}
+
+.info-heading {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.info-description {
+    font-size: 1.2rem;
+    padding: 0 1em;
+}
+
+button {
+    max-width: 250px;
+    width: 70%;
+    margin-top: 2em;
+    padding: 0.9em 0;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    color: var(--color1);
+    transition: 0.5s;
+    outline: none;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px gray;
+    font-size: 1.2rem;
+}
+
+/* Footer Styles */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+i {
+    border: 1px solid var(--color2);
+    padding: 0.5em 0.7em;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+i:hover {
+    background-color: var(--color3)
+}
+
+@media(min-width: 1440px) {
+    /* Common Styles */
+    body {
+        background-image: url(images/bg-desktop.svg);
+        height: 100vh;
+    }
+    /* Header Styles  */
+    .site-title img {
+        max-width: 10em;
+    }
+    /* Content Styles */
+    .content {
+        display: flex;
+        text-align: left;
+    }
+    .info-heading {
+        font-size: 2.5rem;
+    }
+    .info-description {
+        padding: 0;
+        font-size: 1.5rem;
+    }
+    footer {
+        flex-direction: row-reverse;
+        justify-content: right;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}

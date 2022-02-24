@@ -1,0 +1,104 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Common Layout */
+
+.container{
+    /* border: 1px solid black; */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* Header styles */
+header{
+    text-align: center;
+}
+
+h1{
+    font-weight: 100;
+    margin-bottom: 0;
+    /* font-size: 2.3rem */
+}
+
+h2{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
+header p{
+    font-weight: 100;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+/* Cards Style */
+.card{
+    /* border: 1px solid green; */
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgb(216, 218, 224);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.card-title{
+    margin: 12px 0;
+    font-size: 1.8rem;
+}
+
+.card-description{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.card-image{
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.card:nth-child(1){
+    border-top: 4px solid #7DE8E5;
+}
+
+.card:nth-child(2){
+    border-top: 4px solid #EC4251;
+}
+
+.card:nth-child(3){
+    border-top: 4px solid #FFB142;
+}
+
+.card:nth-child(4){
+    border-top: 4px solid #0648a3;
+}
+
+@media(min-width: 700px){
+    .flex-container{
+        display: flex;
+        align-items: center;
+        /* justify-content:center; */
+    }
+
+    .flex-item{
+        flex: 1 1 100px;
+        margin: 0 15px
+    }
+}
